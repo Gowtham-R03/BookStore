@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>BUY PRODUCTS</h1>
+<div mat-dialog-content>
+    <div class="cardBody">
+    <div class="container" >
+        <mat-card class="example-card">
+            <mat-card-header>
+              <mat-card-title>Book Name: {{editData.bookName}}</mat-card-title>
+              <mat-card-subtitle>Author Name: {{editData.authorName}}</mat-card-subtitle>
+            </mat-card-header>
+            <img id="gifImage" mat-card-image [src]="editData.bookImage" alt="Book Photo">
+            <mat-card-content>
+              Description: {{editData.description}}
+             
+            </mat-card-content>
+            <div style="margin-left: 15px;">
+                Price: {{editData.bookPrice | currency:'INR'}}
+            </div>
+            <mat-card-actions align="end">
+              <button  mat-raised-button color="warn" (click)="onBuy()">BUY</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+    </div>
+
+</div>

@@ -1,0 +1,30 @@
+<h1 mat-dialog-title>ADD PRODUCTS</h1>
+<div mat-dialog-content>
+    <form [formGroup]="bookForm">
+    <mat-form-field appearance="outline">
+        <mat-label>Book Name</mat-label>
+        <input formControlName="bookName" matInput placeholder="Book Name">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Author Name</mat-label>
+        <input formControlName="authorName" matInput placeholder="Author Name">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Price</mat-label>
+        <input formControlName="bookPrice" matInput placeholder="Price" type="number">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <input formControlName="description" matInput placeholder="Description">
+    </mat-form-field>
+    <div>
+        <input formControlName="bookImage"  placeholder="bookImage" type="file" (change)="onFileChanged($event)">
+    </div>
+    </form>
+
+</div>
+<div mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addProduct()" [disabled]="!bookForm.valid">{{actionBtn}}</button>
+</div>
+

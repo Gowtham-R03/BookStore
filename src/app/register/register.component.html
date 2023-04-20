@@ -1,0 +1,57 @@
+<div>
+    <button mat-icon-button style="float:right" mat-dialog-close>
+        <mat-icon>close</mat-icon>
+    </button>
+    <h1>REGISTER</h1>
+    <div>
+    <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+        <p>
+            <mat-form-field  appearance="outline">
+                <mat-label>User Name</mat-label>
+                <input matInput placeholder="User Name" formControlName="userName">
+                <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>First Name</mat-label>
+                <input matInput placeholder="First Name" formControlName="userFirstName">
+                <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Last Name</mat-label>
+                <input matInput placeholder="Last Name" formControlName="userLastName">
+                <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" formControlName="userMail">
+                <mat-icon matSuffix>mail</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput type="Password" placeholder="password" formControlName="userPassword">
+                <mat-icon matSuffix>password</mat-icon>
+            </mat-form-field>
+        </p>
+        <div class="radioButton" [(ngModel)]="mainRole" [ngModelOptions]="{standalone: true}">
+            <mat-radio-group aria-label="Select an option">
+                <mat-radio-button class="example-radio-button" *ngFor="let role of roles" [value]="role" (change)="onChange($event)">
+                    {{role}}
+                  </mat-radio-button>
+            </mat-radio-group>
+        </div>
+                
+        <div class="button">
+            <button mat-raised-button color="primary" type="submit" [disabled]="!registerForm.valid">Register</button>
+        </div>  
+    </form>
+    </div> 
+      
+</div>

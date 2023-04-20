@@ -1,0 +1,59 @@
+.center{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+h1{
+
+    font-size: 30px;
+  font-weight: 600;
+}
+
+.container{
+    margin-left: 40px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+}
+
+.example-card {
+    width: 350px;
+    height: 450px;
+}
+
+.footer{
+    margin-left: 40px;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+#gifImage{
+    max-width: 300px;
+    max-height: 250px;
+    margin-left: 15px;
+}
+
+mat-card-content{
+    margin-left: 15px;
+}
+
+
+
+.cardBody{
+    display: grid;
+    grid-template-columns: 450px 450px 450px 450px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+}
+
+.my-pagination{
+    display: flex;
+    justify-content: center;
+}
+
+  

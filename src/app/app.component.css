@@ -1,0 +1,24 @@
+mat-toolbar{
+  min-height: 80px;
+  font-size: 25px;
+  font-weight: 600;
+  background-color: #e3e2ed;
+  
+}
+
+.example-spacer {
+    margin-right: 950px;
+  }
+
+.example-icon {
+  margin-right: 50px;
+  width: 100px;
+  color: #43418a;
+}
+
+
+
+span{
+  margin-left: 20px;
+}
+

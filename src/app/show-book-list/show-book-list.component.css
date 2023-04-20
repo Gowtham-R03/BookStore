@@ -1,0 +1,30 @@
+.center{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+#addProducts{
+    margin-left: 1500px;
+    height: 40px;
+}
+
+table {
+    width: 100%;
+  }
+
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#gifImage{
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+}

@@ -1,0 +1,28 @@
+<div class="center">
+    <h1> BOOK LISTS </h1>
+</div>
+<div class="cardBody">
+<div class="container" *ngFor="let book of books | paginate: { itemsPerPage: 12, currentPage: page, totalItems:totalLength }">
+    <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Book Name: {{book.bookName }}</mat-card-title>
+          <mat-card-subtitle>Author Name: {{book.authorName}}</mat-card-subtitle>
+        </mat-card-header>
+        <img id="gifImage" mat-card-image [src]="book.bookImage" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          Description: {{book.description}}
+         
+        </mat-card-content>
+        <div style="margin-left: 15px;">
+            Price: {{book.bookPrice | currency:'INR'}}
+        </div>
+        <mat-card-actions>
+          <button style="margin-left: 15px;" mat-raised-button color="warn" [disabled]="isDiabled" (click)="onBuy(book)">{{buy}}</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+</div>
+<pagination-controls class="text-center my-pagination" (pageChange)="page = $event"></pagination-controls>
+<div class="footer">
+    <footer> <h4>All Rights Reserved to Respective Owner</h4></footer>
+</div>
