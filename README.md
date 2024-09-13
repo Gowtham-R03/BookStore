@@ -1,5 +1,10 @@
 # BookStore
 
+Developed a role-based bookstore web
+application using Angular, Spring Boot, and MongoDB. Users can log in
+to purchase books, manage their cart, and cancel orders, while admins
+add books for sale
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
 ## Development server
